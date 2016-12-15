@@ -1,4 +1,4 @@
-html, body, #app {
+html, body {
     height:100%;
     width: 100%;
     font-size: 24px;
@@ -10,9 +10,13 @@ html, body, #app {
 
 #controls {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+     justify-content: space-around;
 }
 
 .btn {
+  padding: 10px;
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -35,6 +39,13 @@ html, body, #app {
   text-decoration: none;
 }
 
+#canvas-container {
+    padding: 10px;
+}
+
 #erase {
     background: red;
+}
+#results {
+    display:inline-block;
 }

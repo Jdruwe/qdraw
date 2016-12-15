@@ -13,18 +13,18 @@
             <canvas id="can2" width="400" height="500" style="border: 2px solid; cursor: crosshair;"></canvas>
 </div>
 <div id="controls">
-    <p>This is canvas 2 (Undo, Redo disabled)</p>
-    <span>PenSize2</span>
-    <input type="range" id="penSize2" min="2" max="30" value="10">
-    <span id="lineWidth2">10</span><br>
+    <!--<p>This is canvas 2 (Undo, Redo disabled)</p>-->
+    <!--<span>PenSize2</span>
+    <input type="range" id="penSize2" min="2" max="30" value="10">-->
+    <!--<span id="lineWidth2">10</span><br>-->
     <form>
-        Language:
+        Mode
         <select id="language2">
-           <option value="zh_TW">Chinese</option>
-           <option value="ja">Japanese</option>
-           <option value="en" >English</option>
+           <!--<option value="zh_TW">Chinese</option>
+           <option value="ja">Japanese</option>-->
+           <option value="en" selected="selected">English</option>
            <option value="universal" >Universal</option>
-           <option value="quickdraw" selected="selected">Quickdraw</option>
+           <option value="quickdraw">Quickdraw</option>
        </select>
     </form>
     <br>
@@ -36,14 +36,13 @@
     ">Send</button>-->
 <button class="btn" onclick="can2.undo()">Undo</button>
 <button class="btn" onclick="can2.redo()">Redo</button>
-<br> result: <span id="result2"></span>
+</div>
+<div id="results">
+    <br> Results <span id="result2"></span>
 </div>
 </div>
 <script type="text/javascript" src="./handwriting.canvas.js"></script>
 <script type="text/javascript" src="main.js"></script>
-<script id="__bs_script__">//<![CDATA[
-                             document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.17.5'><\/script>".replace("HOST", location.hostname));
-//]]></script>
 </body>
 
 </html>

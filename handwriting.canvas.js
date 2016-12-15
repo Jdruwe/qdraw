@@ -156,6 +156,7 @@
     };
 
     handwriting.Canvas.prototype.undo = function () {
+        console.log('click fired')
         if (!this.allowUndo || this.step.length <= 0) return;
         else if (this.step.length === 1) {
             if (this.allowRedo) {

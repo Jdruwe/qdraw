@@ -9,7 +9,7 @@ can2.setCallBack(function (data, err) {
     if (err) throw err;
     else document.getElementById("result2").innerHTML = data;
 });
-can2.set_Undo_Redo(false, false);
+can2.set_Undo_Redo(true, true);
 //  var penSize = document.getElementById("penSize");
 //  penSize.addEventListener("mousemove", function () {
 //      document.getElementById("lineWidth").innerHTML = penSize.value;
