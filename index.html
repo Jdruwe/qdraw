@@ -4,40 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>QDraw</title>
-    <style src="style.css"></style>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <div id='app' style="display : inline-block">
-<p>This is canvas 2 (Undo, Redo disabled)</p>
-<span>PenSize2</span>
-<input type="range" id="penSize2" min="2" max="30" value="10">
-<span id="lineWidth2">10</span><br>
-<canvas id="can2" width="600" height="500" style="border: 2px solid; cursor: crosshair;"></canvas>
-<br>
-<form>
-    Language:
-    <select id="language2">
+    <div id="app">
+        <div id="canvas-container">
+            <canvas id="can2" width="400" height="500" style="border: 2px solid; cursor: crosshair;"></canvas>
+</div>
+<div id="controls">
+    <p>This is canvas 2 (Undo, Redo disabled)</p>
+    <span>PenSize2</span>
+    <input type="range" id="penSize2" min="2" max="30" value="10">
+    <span id="lineWidth2">10</span><br>
+    <form>
+        Language:
+        <select id="language2">
            <option value="zh_TW">Chinese</option>
            <option value="ja">Japanese</option>
            <option value="en" >English</option>
            <option value="universal" >Universal</option>
            <option value="quickdraw" selected="selected">Quickdraw</option>
        </select>
-</form>
-<br>
-<button onclick="can2.erase();">Erase2</button>
-<button onclick="
-       var e = document.getElementById('language2');
-       can2.setOptions({language: e.options[e.selectedIndex].value});
-       can2.recognize();
-   ">Send2</button>
-<button onclick="can2.undo()">Undo2</button>
-<button onclick="can2.redo()">Redo2</button>
+    </form>
+    <br>
+    <button id="erase" class="btn" onclick="can2.erase();">Erase</button>
+<!--<button class="btn" onclick="
+        var e = document.getElementById("language2");
+        can2.setOptions({language: e.options[e.selectedIndex].value});
+        can2.recognize();
+    ">Send</button>-->
+<button class="btn" onclick="can2.undo()">Undo</button>
+<button class="btn" onclick="can2.redo()">Redo</button>
 <br> result: <span id="result2"></span>
+</div>
 </div>
 <script type="text/javascript" src="./handwriting.canvas.js"></script>
 <script type="text/javascript" src="main.js"></script>
+<script id="__bs_script__">//<![CDATA[
+                             document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.17.5'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 </body>
 
 </html>
